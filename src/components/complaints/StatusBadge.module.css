@@ -1,0 +1,68 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 9999px;
+    background-color: currentColor;
+}
+
+/* Status Variants */
+.submitted {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+}
+
+.acknowledged {
+    background-color: hsla(var(--info-hsl), 0.1);
+    color: var(--info-hsl);
+    /* The variable --info-hsl is just numbers, we need a color. 
+       Let's check variables.css. --info is defined as hsl(var(--info-hsl)).
+       Tailwind's text-info uses --info.
+       Wait, --info-hsl is 199 89% 48%. 
+       So color should be hsl(var(--info-hsl)).
+    */
+    color: hsl(var(--info-hsl));
+}
+
+.assigned {
+    background-color: hsla(var(--primary-hsl), 0.1);
+    color: hsl(var(--primary-hsl));
+}
+
+.in_progress {
+    background-color: hsla(var(--warning-hsl), 0.1);
+    color: hsl(var(--warning-hsl));
+}
+
+.pending_information {
+    background-color: hsla(var(--accent-hsl), 0.1);
+    color: hsl(var(--accent-hsl));
+}
+
+.resolved {
+    background-color: hsla(var(--success-hsl), 0.1);
+    color: hsl(var(--success-hsl));
+}
+
+.closed {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+}
+
+.rejected {
+    background-color: hsla(var(--destructive-hsl), 0.1);
+    color: hsl(var(--destructive-hsl));
+}

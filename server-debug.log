@@ -1,0 +1,33 @@
+[2026-02-12T14:48:04.590Z] [MongoDB] Initializing new global cache
+[2026-02-12T14:48:04.609Z] [Me API] GET called, token present: true
+[2026-02-12T14:48:04.616Z] [Me API] Decoded token userId: [object Object]
+[2026-02-12T14:48:04.617Z] [MongoDB] dbConnect called, state: hasConn=false, hasPromise=false
+[2026-02-12T14:48:04.617Z] [MongoDB] Creating new connection promise...
+[2026-02-12T14:48:04.617Z] [MongoDB] Awaiting connection promise...
+[2026-02-12T14:48:04.618Z] [MongoDB] Connection successful
+[2026-02-12T14:48:04.619Z] [MongoDB] Connection established/resolved
+[2026-02-12T14:48:04.619Z] [Me API] DB connected, finding user...
+[2026-02-13T15:03:11.913Z] [MongoDB] Initializing new global cache
+[2026-02-13T15:03:11.996Z] [Me API] GET called, token present: true
+[2026-02-13T15:03:12.033Z] [Me API] Decoded token userId: [object Object]
+[2026-02-13T15:03:12.035Z] [MongoDB] dbConnect called, state: hasConn=false, hasPromise=false
+[2026-02-13T15:03:12.036Z] [MongoDB] Creating new connection promise...
+[2026-02-13T15:03:12.096Z] [MongoDB] Awaiting connection promise...
+[2026-02-13T15:03:12.153Z] [MongoDB] Connection successful
+[2026-02-13T15:03:12.155Z] [MongoDB] Connection established/resolved
+[2026-02-13T15:03:12.156Z] [Me API] DB connected, finding user...
+[2026-02-13T15:08:26.180Z] [Me API] GET called, token present: true
+[2026-02-13T15:08:26.189Z] [Me API] Decoded token userId: [object Object], type: object
+[2026-02-13T15:08:26.191Z] [MongoDB] dbConnect called, state: hasConn=true, hasPromise=true
+[2026-02-13T15:08:26.192Z] [Me API] DB connected, finding user...
+[2026-02-13T15:08:32.894Z] [Me API] GET called, token present: true
+[2026-02-13T15:08:32.899Z] [Me API] Decoded token userId: [object Object], type: object
+[2026-02-13T15:08:32.901Z] [MongoDB] dbConnect called, state: hasConn=true, hasPromise=true
+[2026-02-13T15:08:32.902Z] [Me API] DB connected, finding user...
+[2026-02-13T15:09:07.333Z] [Me API] GET called, token present: false
+[2026-02-13T15:09:07.333Z] [Me API] No token, returning null
+[2026-02-13T15:11:29.180Z] [MongoDB] dbConnect called, state: hasConn=true, hasPromise=true
+[2026-02-13T15:11:30.652Z] [MongoDB] dbConnect called, state: hasConn=true, hasPromise=true
+[2026-02-13T15:11:31.181Z] [MongoDB] dbConnect called, state: hasConn=true, hasPromise=true
+[2026-02-13T15:11:31.381Z] [MongoDB] dbConnect called, state: hasConn=true, hasPromise=true
+[2026-02-13T15:13:30.127Z] [MongoDB] dbConnect called, state: hasConn=true, hasPromise=true

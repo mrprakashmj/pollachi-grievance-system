@@ -1,0 +1,84 @@
+.container {
+    min-height: 100vh;
+    background-color: var(--background);
+    padding: 2rem;
+}
+
+.wrapper {
+    max-width: 32rem;
+    /* Reduced width since it's just info now */
+    margin: 0 auto;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.backLink:hover {
+    color: var(--primary);
+}
+
+.card {
+    background-color: var(--card);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+}
+
+.title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    /* Changed from grid to flex column for single col layout */
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.infoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.infoItem:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.icon {
+    color: #2563eb;
+    /* blue-600 */
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.label {
+    font-weight: 600;
+    color: var(--foreground);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.value {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}

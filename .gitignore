@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Firebase
+pollachi-grievance-system-firebase-adminsdk-*.json

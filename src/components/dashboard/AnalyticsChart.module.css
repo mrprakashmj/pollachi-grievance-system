@@ -1,0 +1,5 @@
+.chartContainer {
+    width: 100%;
+    margin-top: 1rem;
+    /* Removed card styling to avoid double borders */
+}

@@ -1,0 +1,84 @@
+:root {
+    /* HSL Values (for opacity modifiers) */
+    --background-hsl: 0 0% 100%;
+    --foreground-hsl: 222.2 84% 4.9%;
+
+    --card-hsl: 0 0% 100%;
+    --card-foreground-hsl: 222.2 84% 4.9%;
+
+    --popover-hsl: 0 0% 100%;
+    --popover-foreground-hsl: 222.2 84% 4.9%;
+
+    --primary-hsl: 215 100% 27%;
+    --primary-foreground-hsl: 210 40% 98%;
+
+    --secondary-hsl: 25 100% 60%;
+    --secondary-foreground-hsl: 222.2 47.4% 11.2%;
+
+    --muted-hsl: 210 40% 96.1%;
+    --muted-foreground-hsl: 215.4 16.3% 46.9%;
+
+    --accent-hsl: 132 100% 28%;
+    --accent-foreground-hsl: 210 40% 98%;
+
+    --destructive-hsl: 0 84.2% 60.2%;
+    --destructive-foreground-hsl: 210 40% 98%;
+
+    --border-hsl: 214.3 31.8% 91.4%;
+    --input-hsl: 214.3 31.8% 91.4%;
+    --ring-hsl: 215 100% 27%;
+
+    /* Custom HSL Values */
+    --success-hsl: 142 76% 36%;
+    --warning-hsl: 38 92% 50%;
+    --danger-hsl: 0 84% 60%;
+    --info-hsl: 199 89% 48%;
+
+    /* Color Variables */
+    --background: hsl(var(--background-hsl));
+    --foreground: hsl(var(--foreground-hsl));
+
+    --card: hsl(var(--card-hsl));
+    --card-foreground: hsl(var(--card-foreground-hsl));
+
+    --popover: hsl(var(--popover-hsl));
+    --popover-foreground: hsl(var(--popover-foreground-hsl));
+
+    --primary: hsl(var(--primary-hsl));
+    --primary-foreground: hsl(var(--primary-foreground-hsl));
+
+    --secondary: hsl(var(--secondary-hsl));
+    --secondary-foreground: hsl(var(--secondary-foreground-hsl));
+
+    --muted: hsl(var(--muted-hsl));
+    --muted-foreground: hsl(var(--muted-foreground-hsl));
+
+    --accent: hsl(var(--accent-hsl));
+    --accent-foreground: hsl(var(--accent-foreground-hsl));
+
+    --destructive: hsl(var(--destructive-hsl));
+    --destructive-foreground: hsl(var(--destructive-foreground-hsl));
+
+    --border: hsl(var(--border-hsl));
+    --input: hsl(var(--input-hsl));
+    --ring: hsl(var(--ring-hsl));
+
+    /* Tamil Nadu Government Custom Colors */
+    --tn-navy: #003087;
+    --tn-gold: #FF9933;
+    --tn-green: #138808;
+
+    /* Aliases for Compatibility */
+    --text-primary: var(--foreground);
+    --card-bg: var(--card);
+    --border-hover: var(--ring);
+
+    /* Spacing & Layout */
+    --radius: 0.5rem;
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    /* Shadows */
+    --govt-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --govt-shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

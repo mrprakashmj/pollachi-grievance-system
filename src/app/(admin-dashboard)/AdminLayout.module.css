@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+.mainContent {
+    flex: 1;
+    /* width: 100%; Removed to prevent horizontal scroll */
+    transition: margin-left 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .mainContent {
+        margin-left: 280px;
+    }
+}
+
+.pagePadding {
+    padding: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .pagePadding {
+        padding: 2rem;
+    }
+}

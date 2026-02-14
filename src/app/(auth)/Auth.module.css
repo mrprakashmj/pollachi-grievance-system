@@ -1,0 +1,330 @@
+.container {
+    max-width: 28rem;
+    /* max-w-md */
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Section */
+.logoSection {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .logoSection {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.logoWrapper {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tn-navy);
+    box-shadow: var(--govt-shadow);
+}
+
+.logoImg {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--tn-navy);
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    color: var(--muted-foreground);
+}
+
+/* Card */
+.card {
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid var(--border);
+    box-shadow: var(--govt-shadow);
+}
+
+/* Error Message */
+.errorAlert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    background-color: hsla(0, 84%, 60%, 0.1);
+    /* destructive/10 */
+    color: var(--destructive);
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.formGroup {
+    margin-bottom: 0;
+}
+
+.label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.375rem;
+    color: var(--foreground);
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted-foreground);
+    pointer-events: none;
+}
+
+.input {
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    background-color: rgba(241, 245, 249, 0.5);
+    /* muted/50 */
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    transition: all 0.2s;
+    outline: none;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(18, 25, 67, 0.2);
+    /* ring-tn-navy/20 */
+    border-color: var(--tn-navy);
+}
+
+.passwordToggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted-foreground);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passwordToggle:hover {
+    color: var(--foreground);
+}
+
+.inputError {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: var(--destructive);
+}
+
+.forgotPasswordLink {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--tn-navy);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.submitBtn {
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.75rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    background-color: var(--tn-navy);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: none;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #002266;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.spinner {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 9999px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+    color: var(--muted-foreground);
+}
+
+.footerLink {
+    font-weight: 600;
+    color: var(--tn-navy);
+    text-decoration: none;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
+}
+
+/* Steps specific to Register */
+.stepsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.stepWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stepCircle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.stepActive {
+    background-color: var(--tn-navy);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.stepInactive {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+}
+
+.stepLine {
+    width: 4rem;
+    height: 0.125rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+}
+
+.lineActive {
+    background-color: var(--tn-navy);
+}
+
+.lineInactive {
+    background-color: var(--muted);
+}
+
+.textArea {
+    resize: none;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+}
+
+.backBtn {
+    flex: 1;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    border: 1px solid var(--border);
+    color: var(--muted-foreground);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.backBtn:hover {
+    background-color: var(--muted);
+}
+
+.flexOne {
+    flex: 1;
+}

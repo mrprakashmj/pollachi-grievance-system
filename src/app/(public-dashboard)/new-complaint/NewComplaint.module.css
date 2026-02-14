@@ -1,0 +1,102 @@
+.container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--tn-navy);
+    letter-spacing: -0.025em;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--muted-foreground);
+    max-width: 32rem;
+    font-weight: 500;
+}
+
+.formCard {
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    box-shadow: var(--govt-shadow-lg);
+    overflow: hidden;
+}
+
+.formHeader {
+    background-color: var(--tn-navy);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.iconWrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+}
+
+.headerContent h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.headerContent p {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.125rem;
+}
+
+.formBody {
+    padding: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .formBody {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .formHeader {
+        padding: 1.25rem;
+    }
+}

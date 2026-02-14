@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.contentWrapper {
+    flex: 1;
+    /* lg:ml-[280px] */
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+    .contentWrapper {
+        margin-left: 280px;
+    }
+}
+
+.mainContent {
+    padding: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .mainContent {
+        padding: 2rem;
+    }
+}

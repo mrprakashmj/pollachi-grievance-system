@@ -1,0 +1,679 @@
+/* Layout & Sections */
+.container {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--background);
+}
+
+.bgGrid {
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.govtHeaderStripe {
+    height: 4px;
+    background: linear-gradient(90deg, var(--tn-green) 0%, var(--white) 50%, var(--tn-gold) 100%);
+}
+
+.navContainer {
+    max-width: 80rem;
+    /* max-w-7xl */
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .navContainer {
+        justify-content: space-between;
+    }
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.logoImage {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.logoLink:hover .logoImage {
+    transform: scale(1.05);
+}
+
+.logoTextContainer {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .logoTextContainer {
+        display: block;
+    }
+}
+
+.logoTitle {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    color: var(--tn-navy);
+}
+
+.logoSubtitle {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--muted-foreground);
+}
+
+.navLinks {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .navLinks {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.signInLink {
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.2s;
+    color: var(--muted-foreground);
+    text-decoration: none;
+}
+
+.signInLink:hover {
+    color: var(--foreground);
+}
+
+/* Hero Section */
+.heroSection {
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroContent {
+    max-width: 64rem;
+    /* max-w-5xl */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.govtBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.375rem;
+    margin-bottom: 2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--muted);
+    border: 1px solid var(--border);
+    color: var(--tn-navy);
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.025em;
+    color: #111827;
+    /* gray-900 */
+}
+
+@media (min-width: 768px) {
+    .heroTitle {
+        font-size: 4.5rem;
+    }
+}
+
+.textGradient {
+    background: linear-gradient(135deg, var(--tn-navy) 0%, var(--tn-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.heroDescription {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.625;
+    color: #4b5563;
+    /* gray-600 */
+}
+
+@media (min-width: 768px) {
+    .heroDescription {
+        font-size: 1.25rem;
+    }
+}
+
+.heroButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 640px) {
+    .heroButtons {
+        flex-direction: row;
+    }
+}
+
+.trackButton {
+    padding: 1rem 2rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    transition: all 0.2s;
+    background-color: white;
+    border: 2px solid var(--tn-navy);
+    color: var(--tn-navy);
+    text-decoration: none;
+}
+
+.trackButton:hover {
+    background-color: var(--muted);
+}
+
+/* Stats */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.statCard {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .statCard {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+.statIconWrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: white;
+    background-color: var(--tn-navy);
+}
+
+.statValue {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.025em;
+    color: var(--foreground);
+}
+
+.statLabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted-foreground);
+}
+
+/* Features */
+.section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.sectionContent {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.sectionTitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+@media (min-width: 768px) {
+    .sectionTitle {
+        font-size: 3rem;
+    }
+}
+
+.sectionUnderscore {
+    height: 0.25rem;
+    width: 5rem;
+    margin: 0 auto;
+    border-radius: 9999px;
+    background-color: var(--tn-navy);
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .featuresGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.featureCard {
+    padding: 2rem;
+    position: relative;
+}
+
+.featureIcon {
+    margin-bottom: 1.5rem;
+    color: var(--tn-navy);
+}
+
+.featureTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.featureDesc {
+    line-height: 1.625;
+    font-weight: 400;
+    color: var(--muted-foreground);
+}
+
+/* Departments */
+.deptSection {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    background-color: rgba(241, 245, 249, 0.3);
+    /* muted/30 */
+}
+
+.deptHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .deptHeader {
+        flex-direction: row;
+    }
+}
+
+.deptTitleBlock {
+    max-width: 42rem;
+}
+
+.deptLabel {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: block;
+    color: var(--tn-navy);
+}
+
+.deptDesc {
+    font-weight: 400;
+    max-width: 24rem;
+    color: var(--muted-foreground);
+}
+
+.deptGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .deptGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .deptGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.deptCard {
+    padding: 2rem;
+    transition: all 0.2s;
+}
+
+.deptCard:hover {
+    box-shadow: var(--govt-shadow-lg);
+}
+
+.deptIcon {
+    margin-bottom: 1.5rem;
+    color: var(--tn-navy);
+}
+
+.deptName {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--foreground);
+}
+
+.deptTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.deptTag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+}
+
+.deptLink {
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s;
+    color: var(--tn-navy);
+    text-decoration: none;
+}
+
+.deptLink:hover {
+    gap: 0.75rem;
+}
+
+/* CTA */
+.ctaCard {
+    max-width: 64rem;
+    margin: 0 auto;
+    position: relative;
+    padding: 4rem 2.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    background-color: var(--tn-navy);
+    border: 1px solid var(--border);
+}
+
+.ctaTitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .ctaTitle {
+        font-size: 3rem;
+    }
+}
+
+.ctaText {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+.ctaRegisterBtn {
+    padding: 1rem 2.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background-color: var(--tn-gold);
+    color: white;
+    text-decoration: none;
+}
+
+.ctaRegisterBtn:hover {
+    opacity: 0.9;
+}
+
+.ctaLoginBtn {
+    padding: 1rem 2.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background-color: white;
+    color: var(--tn-navy);
+    border: 2px solid white;
+    text-decoration: none;
+}
+
+.ctaLoginBtn:hover {
+    background-color: #f3f4f6;
+}
+
+/* Footer */
+.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid var(--border);
+    background-color: rgba(241, 245, 249, 0.4);
+}
+
+.footerGrid {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .footerGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footerBrandCol {
+    grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+    .footerBrandCol {
+        grid-column: span 2;
+    }
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.footerLogoImg {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+
+.footerTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.footerDesc {
+    font-size: 0.875rem;
+    max-width: 24rem;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+    color: var(--muted-foreground);
+}
+
+.footerHeading {
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: var(--foreground);
+}
+
+.footerLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+}
+
+.footerLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footerLink:hover {
+    text-decoration: underline;
+    color: var(--foreground);
+}
+
+.copyright {
+    max-width: 80rem;
+    margin: 4rem auto 0;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+    .copyright {
+        flex-direction: row;
+    }
+}
+
+.copyrightText {
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted-foreground);
+}
+
+.copyrightSub {
+    font-size: 0.5rem;
+    /* ~9px */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted-foreground);
+}

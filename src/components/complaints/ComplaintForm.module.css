@@ -1,0 +1,356 @@
+.container {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+/* Progress Steps */
+.progressSteps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.progressSteps::before {
+    content: '';
+    position: absolute;
+    top: 1.25rem;
+    left: 3.5rem;
+    right: 3.5rem;
+    height: 2px;
+    background-color: var(--border);
+    z-index: 0;
+}
+
+.stepItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 1;
+    min-width: 5rem;
+}
+
+.stepIcon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid var(--border);
+    color: var(--muted-foreground);
+    background-color: white;
+}
+
+.stepIconActive {
+    border-color: var(--tn-navy);
+    background-color: white;
+    color: var(--tn-navy);
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px rgba(0, 48, 135, 0.1);
+}
+
+.stepIconCompleted {
+    background-color: var(--tn-navy);
+    color: white;
+    border-color: var(--tn-navy);
+}
+
+.stepTitle {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    color: var(--muted-foreground);
+}
+
+.stepTitleActive {
+    color: var(--tn-navy);
+}
+
+/* Form Sections */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--tn-navy);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+/* Department Selection */
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.deptCard {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 0.875rem;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: white;
+}
+
+.deptCard:hover {
+    border-color: var(--tn-navy);
+    box-shadow: var(--govt-shadow);
+    transform: translateY(-2px);
+}
+
+.deptCardSelected {
+    border-color: var(--tn-navy);
+    background-color: rgba(0, 48, 135, 0.03);
+    border-width: 2px;
+}
+
+.deptIcon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.deptName {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 0.125rem;
+}
+
+.deptDesc {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+    font-weight: 500;
+}
+
+/* Inputs & Selection */
+.select,
+.input,
+.textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    background-color: #f8fafc;
+    outline: none;
+    transition: all 0.2s;
+    color: var(--foreground);
+    font-size: 0.9375rem;
+}
+
+.textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.select:focus,
+.input:focus,
+.textarea:focus {
+    background-color: white;
+    border-color: var(--tn-navy);
+    box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.1);
+}
+
+.errorMessage {
+    font-size: 0.8rem;
+    color: #ef4444;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Urgency Grid */
+.urgencyGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.urgencyLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    transition: all 0.2s;
+    background-color: white;
+    color: var(--muted-foreground);
+}
+
+.urgencyLabel:hover {
+    border-color: var(--tn-navy);
+    color: var(--tn-navy);
+}
+
+.urgencyLabelSelected {
+    background-color: var(--tn-navy);
+    border-color: var(--tn-navy);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 48, 135, 0.2);
+}
+
+/* Info & Warning Boxes */
+.infoBox,
+.warningBox {
+    padding: 1.25rem;
+    border-radius: 0.875rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.infoBox {
+    background-color: #f0f9ff;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+}
+
+.infoIcon,
+.warningIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.infoIcon {
+    background-color: #e0f2fe;
+}
+
+.warningBox {
+    background-color: #fffbeb;
+    border: 1px solid #fef3c7;
+    color: #b45309;
+}
+
+.warningIcon {
+    background-color: #fef3c7;
+}
+
+.infoText,
+.warningText {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Form Navigation */
+.navButtons {
+    display: flex;
+    gap: 1.25rem;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.backBtn {
+    flex: 1;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    font-weight: 700;
+    color: var(--muted-foreground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+}
+
+.backBtn:hover {
+    background-color: #f8fafc;
+    color: var(--foreground);
+    border-color: #cbd5e1;
+}
+
+.continueBtn {
+    flex: 1.5;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+}
+
+/* Success State */
+.successCard {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.successIcon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 9999px;
+    background-color: #f0fdf4;
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 1px solid #bbf7d0;
+    box-shadow: 0 10px 15px -3px rgba(22, 163, 74, 0.1);
+}
+
+@media (max-width: 640px) {
+    .progressSteps::before {
+        display: none;
+    }
+
+    .stepTitle {
+        display: none;
+    }
+
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+}

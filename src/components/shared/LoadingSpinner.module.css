@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.spinner {
+    border: 4px solid var(--muted);
+    border-left-color: var(--tn-navy);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

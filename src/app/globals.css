@@ -1,26 +1,161 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import './reset.css';
+@import './variables.css';
+
+body {
+  font-family: Arial, 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+
+/* Government Card Styling */
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--govt-shadow);
+  transition: all 0.2s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.glass-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--govt-shadow-lg);
+}
+
+/* Government Button Styling */
+.btn-premium,
+button.btn-premium,
+a.btn-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: var(--radius);
+  background: var(--tn-navy);
+  color: white;
+  transition: all 0.2s ease;
+  border: 1px solid var(--tn-navy);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+}
+
+.btn-premium:hover,
+button.btn-premium:hover,
+a.btn-premium:hover {
+  background: #002266;
+  border-color: #002266;
+  box-shadow: var(--govt-shadow-lg);
+  color: white;
+}
+
+.btn-premium:active,
+button.btn-premium:active,
+a.btn-premium:active {
+  transform: translateY(1px);
+}
+
+.btn-premium:disabled,
+button.btn-premium:disabled,
+a.btn-premium:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Typography - Government Standard */
+.text-gradient {
+  color: var(--tn-navy);
+  font-weight: 700;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid var(--muted);
+  border-left-color: var(--tn-navy);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Status Badges */
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.badge-success {
+  background: hsla(var(--success-hsl), 0.1);
+  color: hsl(var(--success-hsl));
+  border: 1px solid hsla(var(--success-hsl), 0.3);
+}
+
+.badge-warning {
+  background: hsla(var(--warning-hsl), 0.1);
+  color: hsl(var(--warning-hsl));
+  border: 1px solid hsla(var(--warning-hsl), 0.3);
+}
+
+.badge-danger,
+.badge-destructive {
+  background: hsla(var(--danger-hsl), 0.1);
+  color: hsl(var(--danger-hsl));
+  border: 1px solid hsla(var(--danger-hsl), 0.3);
+}
+
+.badge-info {
+  background: hsla(var(--info-hsl), 0.1);
+  color: hsl(var(--info-hsl));
+  border: 1px solid hsla(var(--info-hsl), 0.3);
 }
